@@ -41,8 +41,29 @@
 
 ###### Day 3 Exercise: Odd or Even ######
 
-number = int(input("Which number do you want to check? "))
-if number % 2 == 0:
-    print("Is even")
+# number = int(input("Which number do you want to check? "))
+# if number % 2 == 0:
+#     print("Is even")
+# else:
+#     print("Is odd")
+
+
+#################################################################################
+
+##### Nested if and elif statements
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+
+if height > 120:
+  print("Can get on ride")
+  age = int(input('What is your age? '))
+  if age < 12:
+    print('Please pay $5.')
+  elif 12 <= age <= 18:
+    print('Please pay $7')
+  else:
+    print('Please pay $12')
 else:
-    print("Is odd")
+  print("Cannot ride")
+
