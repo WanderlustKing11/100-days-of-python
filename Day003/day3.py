@@ -52,18 +52,40 @@
 
 ##### Nested if and elif statements
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
 
-if height > 120:
-  print("Can get on ride")
-  age = int(input('What is your age? '))
-  if age < 12:
-    print('Please pay $5.')
-  elif 12 <= age <= 18:
-    print('Please pay $7')
-  else:
-    print('Please pay $12')
-else:
-  print("Cannot ride")
+# if height > 120:
+#   print("Can get on ride")
+#   age = int(input('What is your age? '))
+#   if age < 12:
+#     print('Please pay $5.')
+#   # elif age <= 18:
+#   elif 12 <= age <= 18:
+#     print('Please pay $7')
+#   else:
+#     print('Please pay $12')
+# else:
+#   print("Cannot ride")
 
+
+#################################################################################
+
+##### BMI 2.0
+
+# Enter your height in meters e.g, 1.55
+height = float(input('What is your height (in meters)? '))
+# Enter your weight in kilograms e.g., 72
+weight = int(input('What is your weight (in kg)? '))
+bmi = float(weight) / (height * height)
+message = 'clinically obese'
+if bmi < 18.5:
+    message = 'underweight'
+elif bmi >= 18.5 and bmi < 25:
+    message = 'normal weight'
+elif bmi >= 25 and bmi < 30:
+    message = 'slightly overweight'
+elif bmi >= 30 and bmi < 35:
+    message = 'obese'
+
+print(f"Your BMI is: {bmi}. You are {message}")

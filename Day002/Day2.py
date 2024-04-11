@@ -120,8 +120,8 @@ print(f"Your score is {score}, your height is {height}, and it's {isWinning} tha
 
 ######################
 
-# tip_percent = 12.00
-# bill = input('How much was the bill? $')
-# tip = float(bill) * (tip_percent / 100)
-# print(f'Your tip will be ${round(tip, 2)}.')
+tip_percent = 12.00
+bill = input('How much was the bill? $')
+tip = float(bill) * (tip_percent / 100)
+print(f'Your tip will be ${round(tip, 2)}.')
 
