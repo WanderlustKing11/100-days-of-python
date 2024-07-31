@@ -73,19 +73,39 @@
 
 ##### BMI 2.0
 
-# Enter your height in meters e.g, 1.55
-height = float(input('What is your height (in meters)? '))
-# Enter your weight in kilograms e.g., 72
-weight = int(input('What is your weight (in kg)? '))
-bmi = float(weight) / (height * height)
-message = 'clinically obese'
-if bmi < 18.5:
-    message = 'underweight'
-elif bmi >= 18.5 and bmi < 25:
-    message = 'normal weight'
-elif bmi >= 25 and bmi < 30:
-    message = 'slightly overweight'
-elif bmi >= 30 and bmi < 35:
-    message = 'obese'
+# # Enter your height in meters e.g, 1.55
+# height = float(input('What is your height (in meters)? '))
+# # Enter your weight in kilograms e.g., 72
+# weight = float(input('What is your weight (in kg)? '))
+# bmi = (weight) / (height * height)
+# message = 'clinically obese'
+# if bmi < 18.5:
+#     message = 'are underweight'
+# elif bmi >= 18.5 and bmi < 25:
+#     message = 'have a normal weight'
+# elif bmi >= 25 and bmi < 30:
+#     message = 'are slightly overweight'
+# elif bmi >= 30 and bmi < 35:
+#     message = 'are obese'
+# elif bmi >= 35:
+#     message = 'are clinically obese'
 
-print(f"Your BMI is: {bmi}. You are {message}")
+# print(f"Your BMI is {bmi}, you {message}.")
+
+
+#################################################################################
+
+##### Leap Year
+
+year = int(input())
+
+if year % 4 == 0:
+  if year % 100 == 0:
+    if year % 400 == 0:
+      print("Leap year")
+    else:
+      print("Not leap year")
+  else:
+    print("Leap year")
+else:
+  print("Not leap year")
