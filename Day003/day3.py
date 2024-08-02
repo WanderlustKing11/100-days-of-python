@@ -97,15 +97,40 @@
 
 ##### Leap Year
 
-year = int(input())
+# year = int(input())
 
-if year % 4 == 0:
-  if year % 100 == 0:
-    if year % 400 == 0:
-      print("Leap year")
-    else:
-      print("Not leap year")
+# if year % 4 == 0:
+#   if year % 100 == 0:
+#     if year % 400 == 0:
+#       print("Leap year")
+#     else:
+#       print("Not leap year")
+#   else:
+#     print("Leap year")
+# else:
+#   print("Not leap year")
+
+
+#################################################################################
+
+##### Continuing Roller Coaster example to learn how to use multiple 'if' statements
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height > 120:
+  print("You can ride the rollercoaster!")
+  age = int(input('What is your age? '))
+  if age < 12:
+    bill = 5
+  elif 12 <= age <= 18:
+    bill = 7
   else:
-    print("Leap year")
+    bill = 12
+  photo = input('Would you like a photo? y/n ')
+  if photo == 'y':
+    bill += 3
+  print(f'Please pay ${bill}.')
 else:
-  print("Not leap year")
+  print("Sorry, you have to grow taller before you can ride.")
