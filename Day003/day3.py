@@ -24,6 +24,42 @@
 
 # The game lets you pick your decisions, and depending on what they choose it contains the 
 # game's story.
+ascii = '''
+    _._     _,-'""`-._
+    (,-.`._,'(       |\`-/|
+        `-.-' \ )-`( , o o)
+              `-    \`_`"'-
+'''
+print(ascii)
+print('Welcome to Treasure Island!')
+print('Your mission is to find the treasure.')
+print("You're at a cross road. Where do you want to go?")
+choice_1 = input('Type "left" or "right": ').lower()
+if choice_1 == "left":
+  print('You come at a lake. There is an island in the middle of the lake.')
+  choice_2a = input('Type "wait" to wait for a boat. Type "swim" to swim across: ').lower()
+  if choice_2a == "wait":
+    print('You arrive at the island unharmed. There is a house with 3 doors.')
+    choice_3a = input('One red, one yellow and one blue. Which color do you choose? ').lower()
+    if choice_3a == "red":
+      print("It's a room full of fire.")
+      print("Game over.")
+    elif choice_3a == "yellow":
+      print("The room is filled with gold! You found the treasure!!")
+      print("You win!!")
+    elif choice_3a == "blue":
+      print("You entered a room. The door closes behind you and starts filling with water. There's no way out!")
+      print("Game over.")
+    else:
+      print("Wrong input. You lose.")
+  elif choice_2a == "swim":
+    print("As you get half-way accross the lake, a monster comes from the depths and pulls you under.")
+    print("Game over.")
+  else:
+      print("Wrong input. You lose.")
+elif choice_1 == "right":
+  print("There was a trap door underneith you. You fell into a pit of spikes and are bleeding out.")
+  print("Game over.")
 
 
 #################################################################################
@@ -115,22 +151,65 @@
 
 ##### Continuing Roller Coaster example to learn how to use multiple 'if' statements
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
-bill = 0
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill = 0
 
-if height > 120:
-  print("You can ride the rollercoaster!")
-  age = int(input('What is your age? '))
-  if age < 12:
-    bill = 5
-  elif 12 <= age <= 18:
-    bill = 7
-  else:
-    bill = 12
-  photo = input('Would you like a photo? y/n ')
-  if photo == 'y':
-    bill += 3
-  print(f'Please pay ${bill}.')
-else:
-  print("Sorry, you have to grow taller before you can ride.")
+# if height > 120:
+#   print("You can ride the rollercoaster!")
+#   age = int(input('What is your age? '))
+#   if age < 12:
+#     bill = 5
+#     print('Child tickets are $5.')
+#   elif age <= 18:
+#     bill = 7
+#     print('Youth tickets are $7.')
+#   elif age >= 45 and age <= 55: # elif 45 <= age <= 55:
+#     print("Everything's going to be ok. Have a free ride on us!")
+#   else:
+#     bill = 12
+#     print('Adult tickets are $12.')
+
+#   photo = input('Would you like a photo? Y or N: ')
+#   if photo == 'Y':
+#     bill += 3
+
+#   print(f'Your final bill is ${bill}')
+
+# else:
+#   print('Sorry, you have to grow taller before you can ride.')
+
+
+#################################################################################
+
+##### Pizza Order Practice
+
+# print('Welcome to Python Pizza Deliveries!')
+# size = input('What size pizza do you want? S, M or L: ')
+# pepperoni = input('Do you want pepperoni on you pizza? Y or N: ')
+# extra_cheese = input('Do you want extra cheese? Y or N: ')
+
+# bill = 0
+# if size == 'S':
+#   bill += 15
+# elif size == 'M':
+#   bill += 20
+# elif size == 'L':
+#   bill += 25
+# else:
+#   print('You typed the wrong inputs.')
+
+# if pepperoni == 'Y':
+#   if size == 'S':
+#     bill += 2
+#   else:
+#     bill += 3
+
+# if extra_cheese == 'Y':
+#   bill += 1
+
+# print(f'Your final bill is: ${bill}.')
+
+
+#################################################################################
+
