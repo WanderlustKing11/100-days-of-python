@@ -126,17 +126,33 @@ scissors = '''
 
 game_list = [rock, paper, scissors]
 
-player_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: '))
-print(f'You chose {player_choice}')
-print(f'{game_list[player_choice]}')
+while True:
+  try:
 
-computer_choice = random.randint(0, 2)
-print(f'Computer chose:')
-print(f'{game_list[computer_choice]}')
+    player_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: '))
+    if player_choice not in [0, 1, 2]:
+      print('Invalid input! Please choose 0, 1, or 2.')
+    print(f'You chose: {player_choice}')
+    print(f'{game_list[player_choice]}')
 
-if player_choice == computer_choice:
-  print("It's a tie.")
-elif (player_choice == 0 and computer_choice == 1) or (player_choice == 1 and computer_choice == 2) or (player_choice == 2 and computer_choice == 0):
-  print('Computer wins')
-elif (computer_choice == 0 and player_choice == 1) or (computer_choice == 1 and player_choice == 2) or (computer_choice == 2 and player_choice == 0):
-  print('You win')
+    computer_choice = random.randint(0, 2)
+    print(f'Computer chose: {computer_choice}')
+    print(f'{game_list[computer_choice]}')
+
+    if player_choice == computer_choice:
+      print("It's a tie.")
+    # elif (player_choice == 0 and computer_choice == 1) or (player_choice == 1 and computer_choice == 2) or (player_choice == 2 and computer_choice == 0):
+    elif computer_choice > player_choice or (player_choice == 2 and computer_choice == 0):
+      print('Computer wins')
+    # elif (computer_choice == 0 and player_choice == 1) or (computer_choice == 1 and player_choice == 2) or (computer_choice == 2 and player_choice == 0):
+    elif player_choice > computer_choice or (computer_choice == 2 and player_choice == 0):
+      print('You win')
+    
+  except ValueError:
+    print('Invalid input! Please enter a number (0, 1, or 2).')
+
+  # Game Reset
+  play_again = input('Do you want to play again? y/n: ').lower()
+  if play_again != 'y':
+    print('Thanks for playing!')
+    break
