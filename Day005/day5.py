@@ -15,7 +15,10 @@
 
 #### Max Score
 
-# student_scores = [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 199, 78, 65, 90, 125]
+student_scores = [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 199, 78, 65, 90, 125]
+
+total_exam_score = sum(student_scores)
+# print(f'total exam score = {total_exam_score}')
 
 # max_score = 0
 # for score in student_scores:
